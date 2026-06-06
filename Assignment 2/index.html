@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chocolate Lava Cake — Recipe Card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="page-bg" aria-hidden="true"></div>
+
+  <main class="card-wrap">
+    <article class="recipe-card">
+
+      <!-- HERO IMAGE -->
+      <div class="card-hero">
+        <img
+          src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=900&auto=format&fit=crop&q=80"
+          alt="Chocolate Lava Cake"
+          class="hero-img"
+          onerror="this.src='https://images.unsplash.com/photo-1548365328-8c6db3220e4c?w=900&auto=format&fit=crop&q=80'"
+        />
+        <div class="hero-overlay">
+          <span class="recipe-category">Dessert</span>
+          <h1 class="recipe-title">Chocolate<br /><em>Lava Cake</em></h1>
+        </div>
+      </div>
+
+      <!-- META BAR -->
+      <div class="meta-bar">
+        <div class="meta-item">
+          <span class="meta-icon">⏱</span>
+          <span class="meta-val">25 min</span>
+          <span class="meta-key">Total Time</span>
+        </div>
+        <div class="meta-divider"></div>
+        <div class="meta-item">
+          <span class="meta-icon">🔥</span>
+          <span class="meta-val">10 min</span>
+          <span class="meta-key">Prep Time</span>
+        </div>
+        <div class="meta-divider"></div>
+        <div class="meta-item">
+          <span class="meta-icon">🍽</span>
+          <span class="meta-val">4</span>
+          <span class="meta-key">Servings</span>
+        </div>
+        <div class="meta-divider"></div>
+        <div class="meta-item">
+          <span class="meta-icon">📊</span>
+          <span class="meta-val">Easy</span>
+          <span class="meta-key">Difficulty</span>
+        </div>
+      </div>
+
+      <div class="card-body">
+
+        <!-- PROGRESS BAR -->
+        <div class="progress-section" id="progressSection" style="display:none;">
+          <div class="progress-header">
+            <span class="progress-label">Step <span id="progressCurrent">1</span> of <span id="progressTotal">6</span></span>
+            <span class="progress-pct" id="progressPct">0%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+        </div>
+
+        <!-- TIMER (bonus) -->
+        <div class="timer-bar" id="timerBar" style="display:none;">
+          <span class="timer-icon">⏳</span>
+          <span class="timer-label">Cooking timer:</span>
+          <span class="timer-display" id="timerDisplay">15:00</span>
+          <button class="timer-btn" id="timerToggle">Pause</button>
+        </div>
+
+        <!-- INGREDIENTS -->
+        <section class="section-block" id="ingredientsBlock">
+          <div class="section-heading" id="ingredientsToggle" role="button" tabindex="0" aria-expanded="false">
+            <div class="heading-left">
+              <span class="section-dot"></span>
+              <h2>Ingredients</h2>
+            </div>
+            <button class="toggle-btn" aria-label="Toggle ingredients">
+              <span class="toggle-icon">+</span>
+              <span class="toggle-text">Show</span>
+            </button>
+          </div>
+          <div class="collapsible" id="ingredientsList">
+            <ul class="ingredients-list">
+              <li data-amount="113g">
+                <span class="ing-amount">113g</span>
+                <span class="ing-name">dark chocolate (70% cocoa)</span>
+              </li>
+              <li data-amount="113g">
+                <span class="ing-amount">113g</span>
+                <span class="ing-name">unsalted butter</span>
+              </li>
+              <li data-amount="2">
+                <span class="ing-amount">2</span>
+                <span class="ing-name">whole eggs</span>
+              </li>
+              <li data-amount="2">
+                <span class="ing-amount">2</span>
+                <span class="ing-name">egg yolks</span>
+              </li>
+              <li data-amount="100g">
+                <span class="ing-amount">100g</span>
+                <span class="ing-name">powdered sugar</span>
+              </li>
+              <li data-amount="30g">
+                <span class="ing-amount">30g</span>
+                <span class="ing-name">all-purpose flour</span>
+              </li>
+              <li data-amount="1 tsp">
+                <span class="ing-amount">1 tsp</span>
+                <span class="ing-name">vanilla extract</span>
+              </li>
+              <li data-amount="pinch">
+                <span class="ing-amount">pinch</span>
+                <span class="ing-name">sea salt</span>
+              </li>
+              <li data-amount="for dusting">
+                <span class="ing-amount">for dusting</span>
+                <span class="ing-name">cocoa powder (ramekins)</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- STEPS -->
+        <section class="section-block" id="stepsBlock">
+          <div class="section-heading" id="stepsToggle" role="button" tabindex="0" aria-expanded="false">
+            <div class="heading-left">
+              <span class="section-dot"></span>
+              <h2>Instructions</h2>
+            </div>
+            <button class="toggle-btn" aria-label="Toggle instructions">
+              <span class="toggle-icon">+</span>
+              <span class="toggle-text">Show</span>
+            </button>
+          </div>
+          <div class="collapsible" id="stepsList">
+            <ol class="steps-list" id="stepsList">
+              <li class="step-item" data-step="1">
+                <div class="step-num">01</div>
+                <div class="step-content">
+                  <h3>Prep ramekins</h3>
+                  <p>Butter four 6-oz ramekins generously and dust with cocoa powder, tapping out any excess. Place them on a baking tray and set aside.</p>
+                </div>
+              </li>
+              <li class="step-item" data-step="2">
+                <div class="step-num">02</div>
+                <div class="step-content">
+                  <h3>Melt chocolate & butter</h3>
+                  <p>Combine the dark chocolate and butter in a heatproof bowl. Melt together over a double boiler or in 30-second microwave bursts, stirring until fully smooth. Let cool slightly.</p>
+                </div>
+              </li>
+              <li class="step-item" data-step="3">
+                <div class="step-num">03</div>
+                <div class="step-content">
+                  <h3>Whisk eggs & sugar</h3>
+                  <p>In a separate bowl, whisk together the eggs, egg yolks, and powdered sugar until the mixture is pale and slightly thickened — about 2 minutes by hand.</p>
+                </div>
+              </li>
+              <li class="step-item" data-step="4">
+                <div class="step-num">04</div>
+                <div class="step-content">
+                  <h3>Combine & fold flour</h3>
+                  <p>Pour the melted chocolate mixture into the egg mixture and whisk to combine. Add vanilla extract, then sift in the flour and salt. Fold gently until just incorporated — do not overmix.</p>
+                </div>
+              </li>
+              <li class="step-item" data-step="5">
+                <div class="step-num">05</div>
+                <div class="step-content">
+                  <h3>Fill & chill</h3>
+                  <p>Divide the batter evenly among the prepared ramekins. At this point you can refrigerate them for up to 24 hours. Bring back to room temperature 20 minutes before baking.</p>
+                </div>
+              </li>
+              <li class="step-item" data-step="6">
+                <div class="step-num">06</div>
+                <div class="step-content">
+                  <h3>Bake & serve</h3>
+                  <p>Preheat oven to 220°C (425°F). Bake for 12–14 minutes until the edges are set but the centre still jiggles. Run a knife around the edge, invert onto a plate, and serve immediately with vanilla ice cream.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- ACTION BUTTONS -->
+        <div class="actions-row">
+          <button class="btn-start" id="startBtn">Start Cooking</button>
+          <button class="btn-next" id="nextBtn" style="display:none;">Next Step →</button>
+          <button class="btn-reset" id="resetBtn" style="display:none;">↺ Reset</button>
+        </div>
+
+      </div><!-- /card-body -->
+    </article>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

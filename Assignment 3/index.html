@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore internship programs in Web Development, App Development, Python, and Java Programming.">
+    <title>Internships</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+        <span class="toggle-track">
+            <span class="toggle-thumb"></span>
+        </span>
+        <span class="toggle-icon sun">☀︎</span>
+        <span class="toggle-icon moon">☽</span>
+    </button>
+
+    <main class="page-wrapper">
+
+        <header class="site-header">
+            <h1>Internships</h1>
+        </header>
+
+        <div class="container">
+
+            <div class="cards" id="card-web-dev">
+                <div class="card-header">
+                    <span class="card-icon">🌐</span>
+                    <span class="card-track">Frontend</span>
+                </div>
+                <h2>Web Development Internship Program</h2>
+                <ul>
+                    <li>
+                        <span class="label">Duration</span>
+                        <span class="value">1 month / 2 month</span>
+                    </li>
+                    <li>
+                        <span class="label">Location</span>
+                        <span class="value">Virtual</span>
+                    </li>
+                    <li>
+                        <span class="label">Stipend</span>
+                        <span class="value">-</span>
+                    </li>
+                    <li>
+                        <span class="label">Start Date</span>
+                        <span class="value">05/11/2023</span>
+                    </li>
+                </ul>
+                <a class="card-btn" id="btn-web-dev" href="https://web.classplusapp.com/store/course/506813?section=overview" target="_blank">View Details</a>
+            </div>
+
+            <div class="cards" id="card-app-dev">
+                <div class="card-header">
+                    <span class="card-icon">📱</span>
+                    <span class="card-track">Mobile</span>
+                </div>
+                <h2>App Development Internship Program</h2>
+                <ul>
+                    <li>
+                        <span class="label">Duration</span>
+                        <span class="value">1 month / 2 month</span>
+                    </li>
+                    <li>
+                        <span class="label">Location</span>
+                        <span class="value">Virtual</span>
+                    </li>
+                    <li>
+                        <span class="label">Stipend</span>
+                        <span class="value">-</span>
+                    </li>
+                    <li>
+                        <span class="label">Start Date</span>
+                        <span class="value">05/11/2023</span>
+                    </li>
+                </ul>
+                <a class="card-btn" id="btn-app-dev" href="https://web.classplusapp.com/store/course/649395?section=overview" target="_blank">View Details</a>
+            </div>
+
+            <div class="cards" id="card-python">
+                <div class="card-header">
+                    <span class="card-icon">🐍</span>
+                    <span class="card-track">Backend</span>
+                </div>
+                <h2>Python Programming Internship Program</h2>
+                <ul>
+                    <li>
+                        <span class="label">Duration</span>
+                        <span class="value">1 month / 2 month</span>
+                    </li>
+                    <li>
+                        <span class="label">Location</span>
+                        <span class="value">Virtual</span>
+                    </li>
+                    <li>
+                        <span class="label">Stipend</span>
+                        <span class="value">-</span>
+                    </li>
+                    <li>
+                        <span class="label">Start Date</span>
+                        <span class="value">05/11/2023</span>
+                    </li>
+                </ul>
+                <a class="card-btn" id="btn-python" href="https://web.classplusapp.com/store/course/506722?section=overview" target="_blank">View Details</a>
+            </div>
+
+            <div class="cards" id="card-java">
+                <div class="card-header">
+                    <span class="card-icon">☕</span>
+                    <span class="card-track">Backend</span>
+                </div>
+                <h2>Java Programming Internship Program</h2>
+                <ul>
+                    <li>
+                        <span class="label">Duration</span>
+                        <span class="value">1 month / 2 month</span>
+                    </li>
+                    <li>
+                        <span class="label">Location</span>
+                        <span class="value">Virtual</span>
+                    </li>
+                    <li>
+                        <span class="label">Stipend</span>
+                        <span class="value">-</span>
+                    </li>
+                    <li>
+                        <span class="label">Start Date</span>
+                        <span class="value">05/11/2023</span>
+                    </li>
+                </ul>
+                <a class="card-btn" id="btn-java" href="https://web.classplusapp.com/store/course/506804?section=overview" target="_blank">View Details</a>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script>
+        const toggle = document.getElementById('themeToggle');
+        const html   = document.documentElement;
+
+        const saved = localStorage.getItem('theme') || 'dark';
+        html.setAttribute('data-theme', saved);
+
+        toggle.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            const next    = current === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        });
+
+        document.querySelectorAll('.cards').forEach((card, i) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(28px)';
+            setTimeout(() => {
+                card.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, 80 + i * 100);
+        });
+    </script>
+</body>
+</html>
