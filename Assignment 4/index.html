@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>EditKaro.in — Visual Storytellers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-logo">Edit<span>Karo</span>.in</div>
+  <div class="loader-bar"><div class="loader-progress"></div></div>
+  <div class="loader-text">Loading your experience</div>
+</div>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nav-logo">Edit<span>Karo</span><sup style="font-size:.55rem;opacity:.6;font-style:normal">.in</sup></a>
+  <div class="nav-links">
+    <a href="#work">Work</a>
+    <a href="#process">Process</a>
+    <a href="#about">About</a>
+    <a href="#contact" class="nav-cta">Get in Touch</a>
+  </div>
+  <div class="hamburger" id="hamburger" aria-label="Menu" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#work" class="mobile-link">Work</a>
+  <a href="#process" class="mobile-link">Process</a>
+  <a href="#about" class="mobile-link">About</a>
+  <a href="#contact" class="mobile-link">Contact</a>
+</div>
+
+<!-- HERO -->
+<header class="hero" id="home">
+  <div class="hero-bg-reel"></div>
+  <div class="filmstrip left" id="filmLeft"></div>
+  <div class="filmstrip right" id="filmRight"></div>
+  <div class="hero-line"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">Visual Storytellers · Since 2021</div>
+    <h1 class="hero-title">
+      We Edit.<br/>You <em>Shine.</em>
+    </h1>
+    <p class="hero-sub">Premium video editing &amp; social media marketing for brands that demand excellence. From Reels to Documentaries — every frame tells a story.</p>
+    <div class="hero-actions">
+      <a href="#work" class="btn-primary">View Our Work</a>
+      <a href="#contact" class="btn-ghost">
+        Start a Project
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.75 9H14.25M14.25 9L9.75 4.5M14.25 9L9.75 13.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num counting" data-target="500">0<sup>+</sup></div>
+      <div class="stat-label">Videos Delivered</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num counting" data-target="120">0<sup>+</sup></div>
+      <div class="stat-label">Happy Clients</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num counting" data-target="9">0</div>
+      <div class="stat-label">Edit Categories</div>
+    </div>
+  </div>
+</header>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track" id="marqueeTrack"></div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-wrap">
+    <div class="about-visual reveal">
+      <div class="about-visual-inner">
+        <div class="reel-icon">
+          <div class="reel-inner"></div>
+        </div>
+      </div>
+      <div class="about-accent">Est. 2021 · India</div>
+    </div>
+    <div class="about-text">
+      <div class="section-eyebrow reveal">Who We Are</div>
+      <h2 class="section-title reveal reveal-delay-1">Crafting <em>cinematic</em> stories for modern brands</h2>
+      <p class="section-body reveal reveal-delay-2">EditKaro.in is a full-service video editing &amp; social media marketing agency. We help creators, brands, and businesses communicate through the power of visual storytelling — whether it's a 15-second Reel or a 30-minute documentary.</p>
+      <div class="tags reveal reveal-delay-3">
+        <span class="tag">Short-Form</span>
+        <span class="tag">Long-Form</span>
+        <span class="tag">Gaming</span>
+        <span class="tag">Football Edits</span>
+        <span class="tag">eCommerce Ads</span>
+        <span class="tag">Documentaries</span>
+        <span class="tag">Color Grading</span>
+        <span class="tag">Anime</span>
+        <span class="tag">Ads</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER -->
+<div class="filter-section" id="work">
+  <div class="filter-bar" id="filterBar" role="navigation" aria-label="Category filter">
+    <button class="filter-btn active" data-cat="all">All <span class="filter-count" id="countAll">18</span></button>
+    <button class="filter-btn" data-cat="short-form">Short-Form</button>
+    <button class="filter-btn" data-cat="long-form">Long-Form</button>
+    <button class="filter-btn" data-cat="gaming">Gaming</button>
+    <button class="filter-btn" data-cat="football">Football</button>
+    <button class="filter-btn" data-cat="ecommerce">eCommerce</button>
+    <button class="filter-btn" data-cat="documentary">Documentary</button>
+    <button class="filter-btn" data-cat="color-grading">Color Grading</button>
+    <button class="filter-btn" data-cat="anime">Anime</button>
+    <button class="filter-btn" data-cat="ads">Ads</button>
+  </div>
+</div>
+
+<!-- PORTFOLIO -->
+<section class="portfolio" id="portfolio" aria-label="Portfolio">
+  <div id="portfolioGrid" class="portfolio-grid"></div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-section" id="process">
+  <div class="section-eyebrow">How It Works</div>
+  <h2 class="section-title">Our <em>Creative</em> Process</h2>
+  <p class="section-body">From brief to final cut — we keep things streamlined, transparent, and consistently excellent.</p>
+  <div class="process-grid">
+    <div class="process-card reveal">
+      <div class="process-num">01</div>
+      <h3>Brief &amp; Discovery</h3>
+      <p>We dive deep into your brand, audience, and goals — understanding your vision before a single cut is made.</p>
+      <div class="process-accent"></div>
+    </div>
+    <div class="process-card reveal reveal-delay-1">
+      <div class="process-num">02</div>
+      <h3>Creative Direction</h3>
+      <p>Our editors craft a visual language tailored to your brand — pacing, music, color tone, and transitions.</p>
+      <div class="process-accent"></div>
+    </div>
+    <div class="process-card reveal reveal-delay-2">
+      <div class="process-num">03</div>
+      <h3>Editing &amp; Motion</h3>
+      <p>Frame-by-frame attention — from rough cut to polished masterpiece, with motion graphics where needed.</p>
+      <div class="process-accent"></div>
+    </div>
+    <div class="process-card reveal reveal-delay-3">
+      <div class="process-num">04</div>
+      <h3>Review &amp; Deliver</h3>
+      <p>Two free revision rounds. Fast turnaround. Files delivered in any format — ready to publish instantly.</p>
+      <div class="process-accent"></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+  <div class="section-eyebrow reveal">What Clients Say</div>
+  <h2 class="section-title reveal reveal-delay-1">Stories of <em>Impact</em></h2>
+  <div class="testimonials-inner">
+    <div class="testi-card reveal">
+      <div class="testi-stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+      <p class="testi-text">Our Reels engagement went through the roof after EditKaro took over. The cuts, the pacing — everything just feels premium now.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">AR</div>
+        <div><div class="testi-name">Arjun Rawat</div><div class="testi-role">Fitness Creator · 2.1M Subscribers</div></div>
+      </div>
+    </div>
+    <div class="testi-card reveal reveal-delay-1">
+      <div class="testi-stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+      <p class="testi-text">The football edit for our club's season recap was jaw-dropping. Every goal felt cinematic. Highly recommend for sports brands.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">SK</div>
+        <div><div class="testi-name">Sneha Kulkarni</div><div class="testi-role">Sports Marketing Manager</div></div>
+      </div>
+    </div>
+    <div class="testi-card reveal reveal-delay-2">
+      <div class="testi-stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+      <p class="testi-text">Our eCommerce ROAS doubled after switching to EditKaro's ad creatives. They understand what drives clicks and purchases.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">PK</div>
+        <div><div class="testi-name">Priya Kapoor</div><div class="testi-role">D2C Brand Founder</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section" id="contact">
+  <h2 class="cta-title">Ready to make something <em>unforgettable?</em></h2>
+  <p class="cta-sub">Tell us about your project. We'll get back within 24 hours with a custom plan.</p>
+  <a href="mailto:hello@editkaro.in" class="btn-dark">
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 4.5h12a1 1 0 011 1v7a1 1 0 01-1 1H3a1 1 0 01-1-1v-7a1 1 0 011-1z" stroke="currentColor" stroke-width="1.3"/><path d="M2 5.5l7 4.5 7-4.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+    hello@editkaro.in
+  </a>
+  <div class="cta-contact-row">
+    <a href="https://instagram.com/editkaro.in" class="cta-link" target="_blank">Instagram</a>
+    <span style="opacity:.3;font-size:.7rem">·</span>
+    <a href="https://wa.me/919999999999" class="cta-link" target="_blank">WhatsApp</a>
+    <span style="opacity:.3;font-size:.7rem">·</span>
+    <a href="https://www.youtube.com/@editkaro" class="cta-link" target="_blank">YouTube</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand">Edit<span>Karo</span>.in</div>
+      <div class="footer-tagline">Visual Storytelling for Modern Brands</div>
+    </div>
+    <div class="footer-links">
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#about">About</a>
+      <a href="mailto:hello@editkaro.in">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 EditKaro.in — All Rights Reserved</div>
+    <div class="footer-made">Made with <span>♥</span> for Visual Storytellers</div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Video preview">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 1l12 12M13 1L1 13" stroke="#18130D" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <div class="lightbox-video" id="lightboxVideo">
+      <div class="video-placeholder" id="videoPlaceholder">
+        <div style="width:64px;height:64px;border-radius:50%;border:2px solid rgba(247,243,235,.25);display:flex;align-items:center;justify-content:center;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M8 6.5l10 5.5-10 5.5V6.5z" fill="rgba(247,243,235,.8)"/></svg>
+        </div>
+        <p id="videoMsg" style="font-size:.8rem;color:rgba(247,243,235,.4);letter-spacing:.1em;text-transform:uppercase;text-align:center;max-width:260px"></p>
+      </div>
+    </div>
+    <div class="lightbox-title" id="lightboxTitle"></div>
+    <div class="lightbox-sub" id="lightboxSub"></div>
+    <div class="lightbox-nav">
+      <button class="lb-arrow" id="lbPrev" aria-label="Previous">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11 4.5L6 9l5 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <span id="lbCounter" style="font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(247,243,235,.35)"></span>
+      <button class="lb-arrow" id="lbNext" aria-label="Next">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M7 4.5L12 9l-5 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="lightbox-overlay" id="lightboxOverlay"></div>
+</div>
+
+</body>
+</html>
